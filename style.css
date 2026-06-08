@@ -1,0 +1,100 @@
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #e0e3fc;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .camera-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      background: black;
+    }
+
+    canvas {
+      display: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .tag-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      width: 300px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    
+    .gallery {
+      display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+     gap: 20px; /* 写真同士の間隔 */
+     padding: 20px;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 12px;
+     overflow: hidden;
+     width: 150px; /* 写真カードの幅 */
+      margin: 0 auto; /* 中央寄せ */   
+    }
+
+    .photo-card img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+    }
+
+  .delete-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4d4d;
+  color: white;
+  cursor: pointer;
+  }
+
+  .delete-btn:hover {
+  opacity: 0.8;
+  }  

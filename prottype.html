@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>思い出アルバム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>思い出アルバム</h1>
+
+  <div class="camera-container">
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas"></canvas>
+
+    <input
+      type="text"
+      id="tagInput"
+      class="tag-input"
+      placeholder="メモを残そう（例: カフェ おいしかった）"
+    />
+
+    <button id="captureBtn">撮影して保存</button>
+  </div>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="メモを検索"
+    />
+  </div>
+
+  <div class="gallery" id="gallery"></div>
+
+  <!-- <button class="delete-btn" data-id="${photo.id}">
+  削除
+  </button> -->
+
+  <script src="camera.js"></script>
+
+</body>
+</html>
