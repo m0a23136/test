@@ -116,6 +116,7 @@ openAlbum.addEventListener("click", () => {
     renderPhotos();
 });
 
+
 //カメラに戻る
 backCamera.addEventListener("click", () => {
 
