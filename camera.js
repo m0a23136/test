@@ -111,10 +111,6 @@ openAlbum.addEventListener("click", () => {
     // cameraPage.style.display = "none";
     // albumPage.style.display = "block";
     // renderPhotos();
-
-    openAlbum.addEventListener("click", () => {
-    alert("①");
-
     cameraPage.style.display = "none";
     alert("②");
 
@@ -123,8 +119,6 @@ openAlbum.addEventListener("click", () => {
 
     renderPhotos();
     alert("④");
-});
-
 });
 
 //カメラに戻る
