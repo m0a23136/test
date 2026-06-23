@@ -5,7 +5,7 @@
       background: #e0e3fc;
     }
 
-    h1 {
+    h1,h2 {
       text-align: center;
     }
 
@@ -98,3 +98,40 @@
   .delete-btn:hover {
   opacity: 0.8;
   }  
+
+  .link-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #07058d;
+    color: white;
+    text-decoration: none; /* 下線を消す */
+    border-radius: 8px;
+}
+
+.link-btn:hover{
+    opacity: 0.8;
+}
+  
+
+  .memory-gauge {
+    width: 350px;
+    height: 25px;
+    margin: 20px auto 10px;
+    border: 2px solid #555;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#memoryBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #76a8f1, #4876eb);
+    transition: width 0.5s ease;
+}
+
+#memoryText {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

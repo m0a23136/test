@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>思い出アルバム</title>
   <link rel="stylesheet" href="style.css">
-</head>
+ </head>
 
 <body>
 
@@ -22,26 +22,17 @@
       placeholder="メモを残そう（例: カフェ おいしかった）"
     />
 
-    <button id="captureBtn">撮影して保存</button>
-
     <button id="switchCameraBtn">
       カメラ切替
     </button>
+
+    <button id="captureBtn">撮影して保存</button>
+
   </div>
 
-  <div class="search-box">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="メモを検索"
-    />
-  </div>
+  <a href="album.html" class="link-btn">アルバムを開く</a>
 
-  <div class="gallery" id="gallery"></div>
-
-  <!-- <button class="delete-btn" data-id="${photo.id}">
-  削除
-  </button> -->
+  
 
   <script src="camera.js"></script>
 
