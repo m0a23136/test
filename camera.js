@@ -108,17 +108,12 @@ captureBtn.addEventListener('click', () => {
 //アルバムをひらく
 openAlbum.addEventListener("click", () => {
 
-    // cameraPage.style.display = "none";
-    // albumPage.style.display = "block";
-    // renderPhotos();
+
     cameraPage.style.display = "none";
-    alert("②");
 
     albumPage.style.display = "block";
-    alert("③");
 
     renderPhotos();
-    alert("④");
 });
 
 //カメラに戻る
