@@ -1,3 +1,6 @@
+const gallery = document.getElementById("gallery");
+const searchInput = document.getElementById("searchInput");
+
 searchInput.addEventListener('input', (e) => {
     renderPhotos(e.target.value);
 });

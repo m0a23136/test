@@ -16,11 +16,6 @@ const switchCameraBtn =
 let currentCamera = "environment";
 let currentStream = null;
 
-console.log("captureBtn:", captureBtn);
-console.log("switchCameraBtn:", switchCameraBtn);
-console.log("openAlbum:", openAlbum);
-console.log("backCamera:", backCamera);
-
 // カメラ起動
 async function startCamera() {
 
@@ -113,10 +108,22 @@ captureBtn.addEventListener('click', () => {
 //アルバムをひらく
 openAlbum.addEventListener("click", () => {
 
+    // cameraPage.style.display = "none";
+    // albumPage.style.display = "block";
+    // renderPhotos();
+
+    openAlbum.addEventListener("click", () => {
+    alert("①");
+
     cameraPage.style.display = "none";
+    alert("②");
+
     albumPage.style.display = "block";
+    alert("③");
 
     renderPhotos();
+    alert("④");
+});
 
 });
 
