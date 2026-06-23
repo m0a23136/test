@@ -1,5 +1,3 @@
-renderPhotos();
-
 searchInput.addEventListener('input', (e) => {
     renderPhotos(e.target.value);
 });

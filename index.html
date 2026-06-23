@@ -8,7 +8,7 @@
  </head>
 
 <body>
-
+<div id="cameraPage">
   <h1>思い出アルバム</h1>
 
   <div class="camera-container">
@@ -30,11 +30,37 @@
 
   </div>
 
-  <a href="album.html" class="link-btn">アルバムを開く</a>
+  <button class="link-btn" id="openAlbum">アルバムを開く</button>
 
-  
+</div>
 
-  <script src="camera.js"></script>
+<div id="albumPage" style="display:none;">
+
+ <h2>思い出ゲージ</h2> 
+ <div class="memory-gauge">
+    <div id="memoryBar"></div>
+ </div>
+
+ <p id="memoryText">撮った写真：0枚</p>
+
+ <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="メモを検索">
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+ <button id="backCamera">
+    カメラへ戻る
+ </button>
+
+</div>
+
+<script src="common.js"></script>
+<script src="camera.js"></script>
+<script src="album.js"></script>
 
 </body>
 </html>

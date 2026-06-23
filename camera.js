@@ -1,3 +1,9 @@
+const cameraPage = document.getElementById("cameraPage");
+const albumPage = document.getElementById("albumPage");
+
+const openAlbum = document.getElementById("openAlbum");
+const backCamera = document.getElementById("backCamera");
+
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const captureBtn = document.getElementById('captureBtn');
@@ -9,6 +15,11 @@ const switchCameraBtn =
 
 let currentCamera = "environment";
 let currentStream = null;
+
+console.log("captureBtn:", captureBtn);
+console.log("switchCameraBtn:", switchCameraBtn);
+console.log("openAlbum:", openAlbum);
+console.log("backCamera:", backCamera);
 
 // カメラ起動
 async function startCamera() {
@@ -65,12 +76,18 @@ function savePhotos(photos) {
 captureBtn.addEventListener('click', () => {
   const context = canvas.getContext('2d');
 
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
+ // 保存する画像サイズ
+ const width = 640;
+ const height = 480;
 
-  context.drawImage(video, 0, 0);
+ canvas.width = width;
+ canvas.height = height;
 
-  const imageData = canvas.toDataURL('image/png');
+ // カメラ映像を縮小して描画
+ context.drawImage(video, 0, 0, width, height);
+
+ // JPEG形式
+ const imageData = canvas.toDataURL('image/jpeg');
 
   const tags = tagInput.value
     .split(' ')
@@ -93,7 +110,23 @@ captureBtn.addEventListener('click', () => {
   alert("保存しました")
 });
 
+//アルバムをひらく
+openAlbum.addEventListener("click", () => {
 
+    cameraPage.style.display = "none";
+    albumPage.style.display = "block";
+
+    renderPhotos();
+
+});
+
+//カメラに戻る
+backCamera.addEventListener("click", () => {
+
+    albumPage.style.display = "none";
+    cameraPage.style.display = "block";
+
+});
 
 // 初期化
 startCamera();
