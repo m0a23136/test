@@ -7,9 +7,7 @@ const backCamera = document.getElementById("backCamera");
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const captureBtn = document.getElementById('captureBtn');
-const gallery = document.getElementById('gallery');
 const tagInput = document.getElementById('tagInput');
-const searchInput = document.getElementById('searchInput');
 const switchCameraBtn =
   document.getElementById('switchCameraBtn');
 
@@ -55,16 +53,6 @@ switchCameraBtn.addEventListener('click', () => {
   startCamera();
 
 });
-
-// LocalStorageから取得
-function getPhotos() {
-  return JSON.parse(localStorage.getItem('photos')) || [];
-}
-
-// LocalStorageへ保存
-function savePhotos(photos) {
-  localStorage.setItem('photos', JSON.stringify(photos));
-}
 
 
 // 撮影
