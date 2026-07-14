@@ -4,6 +4,7 @@ const albumPage = document.getElementById("albumPage");
 const openAlbum = document.getElementById("openAlbum");
 const backCamera = document.getElementById("backCamera");
 
+const shutterSound = new Audio("shutter.mp3");
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const captureBtn = document.getElementById('captureBtn');
@@ -68,6 +69,9 @@ captureBtn.addEventListener('click', () => {
 
  // カメラ映像を縮小して描画
  context.drawImage(video, 0, 0, width, height);
+
+ shutterSound.currentTime = 0;
+ shutterSound.play(); 
 
  // JPEG形式
  const imageData = canvas.toDataURL('image/jpeg');
