@@ -22,12 +22,20 @@ function renderPhotos(filterTag = '') {
     const card = document.createElement('div');
     card.className = 'photo-card';
 
+    console.log(photo);
+
    card.innerHTML = `
      <img src="${photo.image}" alt="photo">
+     
      <div class="photo-info">
-      <div class="tags">
-       ${photo.tags.map(tag => `#${tag}`).join(' ')}
+
+      <div class="memo">
+       ${photo.memo||''}
       </div>
+
+     <div class="tags">
+      ${photo.tags.map(tag => `#${tag}`).join(' ')}
+     </div>
 
      <div class="date">
       ${photo.date}

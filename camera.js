@@ -76,6 +76,19 @@ captureBtn.addEventListener('click', () => {
  // JPEG形式
  const imageData = canvas.toDataURL('image/jpeg');
 
+   // 撮影した写真を一時保存
+  pendingPhoto = imageData;
+
+  // メモ入力
+  const memo = prompt("この写真の思い出を入力してください");
+
+  // キャンセルされた場合
+  if (memo === null) {
+    pendingPhoto = null;
+    return;
+  }
+
+  //保存
   const tags = tagInput.value
     .split(' ')
     .map(tag => tag.trim())
@@ -85,6 +98,7 @@ captureBtn.addEventListener('click', () => {
    id: Date.now(),
    image: imageData,
    tags: tags,
+   memo:memo,
    date: new Date().toLocaleString('ja-JP')
   };
 
@@ -93,6 +107,8 @@ captureBtn.addEventListener('click', () => {
   savePhotos(photos);
 
   tagInput.value = '';
+  pendingPhoto = null;
+
 
   alert("保存しました")
 });
