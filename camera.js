@@ -74,7 +74,7 @@ captureBtn.addEventListener('click', () => {
   shutterSound.play();
 
   // JPEG形式
-  const imageData = canvas.toDataURL('image/jpeg');
+  const imageData = canvas.toDataURL('image/jpeg',0.5);
 
   // 撮影した写真を一時保存
   pendingPhoto = imageData;
@@ -88,11 +88,11 @@ captureBtn.addEventListener('click', () => {
     return;
   }
 
-  // タグ
-  const tags = tagInput.value
-    .split(' ')
-    .map(tag => tag.trim())
-    .filter(tag => tag !== '');
+  // // タグ
+  const tags = []
+  //   .split(' ')
+  //   .map(tag => tag.trim())
+  //   .filter(tag => tag !== '');
 
   // 保存するデータ
   const newPhoto = {
