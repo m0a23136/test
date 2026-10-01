@@ -107,6 +107,15 @@ captureBtn.addEventListener('click', () => {
   photos.push(newPhoto);
   savePhotos(photos);
 
+  try {
+  savePhotos(photos);
+  alert("保存処理成功");
+} catch (error) {
+  alert("保存でエラーが起きました: " + error.message);
+  console.error(error);
+  return;
+}
+
   tagInput.value = '';
   pendingPhoto = null;
 
