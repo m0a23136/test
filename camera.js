@@ -107,8 +107,6 @@ captureBtn.addEventListener('click', () => {
   photos.push(newPhoto);
   savePhotos(photos);
 
-  
-
   tagInput.value = '';
   pendingPhoto = null;
 
