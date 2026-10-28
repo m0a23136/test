@@ -71,20 +71,20 @@ function renderPhotos(filterTag = '') {
 }
 
 
-function updateMemoryGauge() {
+// function updateMemoryGauge() {
 
-    const photos = getPhotos();
+//     const photos = getPhotos();
 
-    const maxPhotos = 30;   //ゲージの最大値
+//     const maxPhotos = 30;   //ゲージの最大値
 
-    const percent = Math.min(
-        photos.length / maxPhotos * 100,
-        100
-    );
+//     const percent = Math.min(
+//         photos.length / maxPhotos * 100,
+//         100
+//     );
 
-    document.getElementById("memoryBar").style.width =
-        percent + "%";
+//     document.getElementById("memoryBar").style.width =
+//         percent + "%";
 
-    document.getElementById("memoryText").textContent =
-        `撮った写真：${photos.length}枚`;
-}
+//     document.getElementById("memoryText").textContent =
+//         `撮った写真：${photos.length}枚`;
+// }

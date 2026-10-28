@@ -111,6 +111,7 @@ captureBtn.addEventListener('click', () => {
   pendingPhoto = null;
 
   alert("保存しました");
+  
 });
 
 //アルバムをひらく
